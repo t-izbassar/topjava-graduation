@@ -1,0 +1,13 @@
+apply plugin: 'pmd'
+
+pmd {
+    toolVersion = '5.8.1'
+}
+
+pmdMain {
+    ruleSetFiles = files("static-analysis/pmd_main.xml")
+}
+
+pmdTest {
+    ruleSetFiles = files("static-analysis/pmd_test.xml")
+}

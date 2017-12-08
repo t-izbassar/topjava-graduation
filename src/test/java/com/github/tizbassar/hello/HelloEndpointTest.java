@@ -12,6 +12,13 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
+/**
+ * Tests for {@link HelloEndpoint}
+ *
+ * @author Tolegen Izbassar (t.izbassar@gmail.com)
+ * @version $Id$
+ * @since 0.1.0
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
