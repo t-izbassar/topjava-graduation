@@ -1,6 +1,6 @@
 # Restaurant voting simple REST application
 
-[![Build Status](https://travis-ci.org/t-izbassar/motivation-dashboard.svg?branch=master)](https://travis-ci.org/t-izbassar/motivation-dashboard)
+[![Build Status](https://travis-ci.org/t-izbassar/topjava-graduation.svg?branch=master)](https://travis-ci.org/t-izbassar/topjava-graduation)
 
 This application is a showcase for various
 techniques, that are commonly used in modern
