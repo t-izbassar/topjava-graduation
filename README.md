@@ -1,4 +1,7 @@
 # Restaurant voting simple REST application
+
+[![Build Status](https://travis-ci.org/t-izbassar/motivation-dashboard.svg?branch=master)](https://travis-ci.org/t-izbassar/motivation-dashboard)
+
 This application is a showcase for various
 techniques, that are commonly used in modern
 backend application development on java
