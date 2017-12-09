@@ -29,3 +29,13 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
+
+def compilerArgs = ['-Xlint:all', '-Werror']
+
+compileJava {
+    options.compilerArgs.addAll(compilerArgs)
+}
+
+compileTestJava {
+    options.compilerArgs.addAll(compilerArgs)
+}
