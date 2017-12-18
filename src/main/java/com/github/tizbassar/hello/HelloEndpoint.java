@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * HelloEndpoint as proof of work
+ * HelloEndpoint as proof of work.
  *
  * @author Tolegen Izbassar (t.izbassar@gmail.com)
  * @version $Id$
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloEndpoint {
 
     /**
-     * Greeting resource
+     * Greeting resource.
      * @param name name to greet
      * @return greetings
      */

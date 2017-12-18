@@ -16,6 +16,7 @@ apply plugin: 'org.springframework.boot'
 
 apply from: 'gradle/pmd.gradle'
 apply from: 'gradle/coverage.gradle'
+apply from: 'gradle/checkstyle.gradle'
 
 group = 'com.github.tizbassar'
 version = '0.0.1'

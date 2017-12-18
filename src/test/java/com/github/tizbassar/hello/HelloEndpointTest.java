@@ -8,12 +8,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 /**
- * Tests for {@link HelloEndpoint}
+ * Tests for {@link HelloEndpoint}.
  *
  * @author Tolegen Izbassar (t.izbassar@gmail.com)
  * @version $Id$
@@ -24,13 +23,22 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 public class HelloEndpointTest {
 
+    /**
+     * HttpClient provided from Spring.
+     */
     @Autowired
     private MockMvc mockMvc;
 
+    /**
+     * Simple test case for greeting.
+     * @throws Exception if couldn't perform request
+     */
     @Test
     public void shouldGreet() throws Exception {
-        mockMvc.perform(get("/hello?name=someName"))
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
-                .andExpect(content().string("Hello, someName"));
+        mockMvc.perform(MockMvcRequestBuilders.get("/hello?name=someName"))
+                .andExpect(MockMvcResultMatchers.content()
+                        .contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(MockMvcResultMatchers.content()
+                        .string("Hello, someName"));
     }
 }

@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Entrance class to run Spring-Boot application
+ * Entrance class to run Spring-Boot application.
  *
  * @author Tolegen Izbassar (t.izbassar@gmail.com)
  * @version $Id$
@@ -14,7 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Entrance {
 
     /**
-     * Java main method
+     * Java main method.
      * @param args cli args
      */
     public static void main(final String[] args) {
