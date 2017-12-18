@@ -2,5 +2,12 @@ apply plugin: 'checkstyle'
 
 checkstyle {
     toolVersion = '8.5'
-    configFile = file('static-analysis/checkstyle.xml')
+}
+
+checkstyleMain {
+    configFile = file('static-analysis/checkstyle_main.xml')
+}
+
+checkstyleTest {
+    configFile = file('static-analysis/checkstyle_test.xml')
 }

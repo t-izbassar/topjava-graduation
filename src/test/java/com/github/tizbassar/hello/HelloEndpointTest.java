@@ -23,16 +23,9 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 @AutoConfigureMockMvc
 public class HelloEndpointTest {
 
-    /**
-     * HttpClient provided from Spring.
-     */
     @Autowired
     private MockMvc mockMvc;
 
-    /**
-     * Simple test case for greeting.
-     * @throws Exception if couldn't perform request
-     */
     @Test
     public void shouldGreet() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/hello?name=someName"))
