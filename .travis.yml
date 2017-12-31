@@ -4,8 +4,8 @@ install:
   ./gradlew assemble
 
 script:
-  ./gradlew check
-  ./gradlew -i integrationTest
+  - ./gradlew check
+  - ./gradlew -i integrationTest
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
