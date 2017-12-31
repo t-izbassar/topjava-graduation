@@ -1,19 +1,21 @@
 language: java
-
-install:
-  ./gradlew assemble
-
+sudo: false
+install: "./gradlew assemble"
+addons:
+  sonarcloud:
+    organization: t-izbassar-github
+    token:
+      secure: DdobPXCjEHJpqC5TvihddVmAmRI7cKU8VYj8yYyUOTQDkqrt75qD4yA0do2zFZ8kBG0bHKdfpQkP6Vie48CFFYRxg1uATTDkNVRI4Oaq1xDANnMP0+HI7cmGQXvPFk08tVz74hKeeQBBLNAlso56UFEOI+9MyNX911g2a+lxLILpfnYYsOU2zMtaRYgyJH98aYua6rqGBdZy3O8wIpRl3TuoKpp7RvDSx6Yq6Ycnk4xEc+SV0EceZ/v0o7gbZCIfaJd3na4APnx9YiuDW8wsDg3kMg68earvMYdc3L+dnT6J1InXiceTjJiydTwRT5PlLfjiFqy/dLYIvOcfRIIBZ7iiuZ8SNHUhPnubS6c6q9GVNmRMUPozNR1W0gfXS5UScom00d7JuzXAyDA8EPQFX28uNu1sGBEmX+QRQ1cOYa8Y2lxNGnCSejQc8cMF5FDkydsKPy7vM578fkvM6mnUeyK7OYf31k+YFuTz5qNLQfcy6hSzPLq7nos0e6vnuIMmQPGEwGBAFKY2qPYw8uZc/0HsRJqxgLNHZuMsfc42nlp58QTPBTE1u/ZX5k/CaRod9ex9niW7x+xAaYZUheR1tG4FIEz0P8a7M1vS2RkvIqgiFoC62I/wELFPl+tMmTHBqrnrQoLi62aFqWFam+WtWdo4NgccElOLHGer/yw0Pg4=
 script:
-  - ./gradlew check
-  - ./gradlew -i integrationTest
-
+- "./gradlew check"
+- "./gradlew -i integrationTest"
+- sonar-scanner
 before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
-
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+- bash <(curl -s https://codecov.io/bash)

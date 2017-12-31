@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/t-izbassar/topjava-graduation.svg?branch=master)](https://travis-ci.org/t-izbassar/topjava-graduation)
 [![Coverage Status](https://codecov.io/gh/t-izbassar/topjava-graduation/branch/master/graph/badge.svg)](https://codecov.io/gh/t-izbassar/topjava-graduation)
+[![Quality Gate](https://sonarqube.com/api/badges/gate?key=com.github.tizbassar:topjava-graduation)](https://sonarqube.com/dashboard/index/com.github.tizbassar:topjava-graduation)
+[![Quality Gate](https://sonarqube.com/api/badges/gate?key=com.github.tizbassar:topjava-graduation&metric=sqale_debt_ratio)](https://sonarqube.com/dashboard/index/com.github.tizbassar:topjava-graduation)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/t-izbassar/topjava-graduation/blob/master/LICENSE)
 
 This application is a showcase for various
