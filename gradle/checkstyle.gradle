@@ -11,3 +11,7 @@ checkstyleMain {
 checkstyleTest {
     configFile = file('static-analysis/checkstyle_test.xml')
 }
+
+checkstyleIntegrationTest {
+    configFile = file('static-analysis/checkstyle_test.xml')
+}

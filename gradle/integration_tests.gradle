@@ -1,0 +1,12 @@
+dependencies {
+    integrationTestCompile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    integrationTestCompile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    integrationTestCompile group: 'org.glassfish.jersey.core', name: 'jersey-client', version: '2.25.1'
+    integrationTestCompile group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '2.25.1'
+}
+
+integrationTest {
+    logging.captureStandardOutput(LogLevel.INFO)
+    dependsOn(startApplication)
+    finalizedBy(stopApplication)
+}

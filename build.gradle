@@ -1,31 +1,31 @@
 buildscript {
-	ext {
-		springBootVersion = '1.5.9.RELEASE'
-	}
 	repositories {
 		mavenCentral()
 	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
 }
 
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'org.springframework.boot'
+plugins {
+    id 'org.unbroken-dome.test-sets' version '1.4.2'
+    id 'org.springframework.boot' version '1.5.9.RELEASE'
+}
 
-apply from: 'gradle/pmd.gradle'
-apply from: 'gradle/coverage.gradle'
-apply from: 'gradle/checkstyle.gradle'
+repositories {
+    mavenCentral()
+}
 
 group = 'com.github.tizbassar'
 version = '0.0.1'
 sourceCompatibility = 1.8
 
-repositories {
-	mavenCentral()
+apply plugin: 'java'
+
+testSets {
+    integrationTest
 }
 
+apply from: 'gradle/pmd.gradle'
+apply from: 'gradle/coverage.gradle'
+apply from: 'gradle/checkstyle.gradle'
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
@@ -34,10 +34,22 @@ dependencies {
 
 def compilerArgs = ['-Xlint:all', '-Werror']
 
-compileJava {
+tasks.withType(Test) {
+    reports.html.setDestination(file("${reporting.baseDir}/${name}"))
+}
+
+tasks.withType(JavaCompile) {
     options.compilerArgs.addAll(compilerArgs)
 }
 
-compileTestJava {
-    options.compilerArgs.addAll(compilerArgs)
+tasks.create(name: 'startApplication', type: Exec) {
+    dependsOn(jar, bootRepackage)
+
+    commandLine 'sh', 'start.sh', "${jar.archivePath}"
 }
+
+tasks.create(name: 'stopApplication', type: Exec) {
+    commandLine 'sh', 'stop.sh'
+}
+
+apply from: 'gradle/integration_tests.gradle'
