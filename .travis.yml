@@ -1,5 +1,6 @@
 language: java
 sudo: false
+dist: trusty
 install: "./gradlew assemble"
 addons:
   sonarcloud:
