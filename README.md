@@ -1,5 +1,6 @@
 # Restaurant voting simple REST application
 
+[![PDD status](http://www.0pdd.com/svg?name=t-izbassar/topjava-graduation)](http://www.0pdd.com/p?name=t-izbassar/topjava-graduation)
 [![Build Status](https://travis-ci.org/t-izbassar/topjava-graduation.svg?branch=master)](https://travis-ci.org/t-izbassar/topjava-graduation)
 [![Coverage Status](https://codecov.io/gh/t-izbassar/topjava-graduation/branch/master/graph/badge.svg)](https://codecov.io/gh/t-izbassar/topjava-graduation)
 [![Quality Gate](https://sonarqube.com/api/badges/gate?key=com.github.tizbassar:topjava-graduation)](https://sonarqube.com/dashboard/index/com.github.tizbassar:topjava-graduation)

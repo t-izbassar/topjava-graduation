@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Tolegen Izbassar (t.izbassar@gmail.com)
  * @version $Id$
  * @since 0.1.0
+ *
+ * @todo #26:30m/DEV Delete HelloEndpoint as it is created only for
+ *  proof of concept. Delete it after core logic is defined.
  */
 @RestController
 @RequestMapping("/hello")
