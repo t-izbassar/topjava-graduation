@@ -6,8 +6,6 @@
     <property name="localeLanguage" value="en"/>
     <module name="Translation"/>
 
-    <module name="JavadocPackage"/>
-
     <module name="NewlineAtEndOfFile">
         <property name="fileExtensions" value="java"/>
         <property name="lineSeparator" value="lf"/>

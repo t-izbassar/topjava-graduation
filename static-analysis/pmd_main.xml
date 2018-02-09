@@ -35,7 +35,14 @@
     <rule ref="rulesets/java/junit.xml"/>
     <rule ref="rulesets/java/metrics.xml"/>
     <rule ref="rulesets/java/migrating.xml"/>
-    <rule ref="rulesets/java/naming.xml"/>
+    <rule ref="rulesets/java/naming.xml">
+      <exclude name="ShortVariable"/>
+    </rule>
+    <rule ref="rulesets/java/naming.xml/ShortClassName">
+      <properties>
+        <property name="minimum" value="4"/>
+      </properties>
+    </rule>
     <rule ref="rulesets/java/optimizations.xml"/>
     <rule ref="rulesets/java/strictexception.xml"/>
     <rule ref="rulesets/java/strings.xml"/>
