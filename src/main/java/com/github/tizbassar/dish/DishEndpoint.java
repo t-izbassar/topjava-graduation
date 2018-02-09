@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @version $Id$
  * @since 0.1.0
  *
- * @todo #7:30min/DEV Write integration test for DishEndpoint.
+ * @todo #7:30min/DEV Write now there is no integration test for
+ *  DishEndpoint. This should be fixed.
  */
 @RestController
 @RequestMapping("/dish")

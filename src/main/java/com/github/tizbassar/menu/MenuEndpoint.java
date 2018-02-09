@@ -14,7 +14,8 @@ import java.util.Collections;
  * @version $Id$
  * @since 0.1.0
  *
- * @todo #7:30min/DEV Write integration test for MenuEndpoint.
+ * @todo #7:30min/DEV Write now there is no integration test for
+ *  MenuEndpoint. This should be fixed.
  */
 @RestController
 @RequestMapping("menu")
